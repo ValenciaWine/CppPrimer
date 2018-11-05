@@ -9,7 +9,7 @@ using std::endl;
 using std::string;
 using std::vector;
 
-int main()
+int main1()
 {
 
 	string currentWord;
@@ -45,5 +45,5 @@ int main()
 	}
 
 
-
+	return 0;
 }
