@@ -11,7 +11,7 @@ using std::string;
 using std::vector;
 
 
-int main()
+int main3()
 {
 	// change the values of the vector here
 	int i1, i2, result;

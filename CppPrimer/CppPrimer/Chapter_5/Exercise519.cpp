@@ -9,7 +9,7 @@ using std::endl;
 using std::string;
 using std::vector;
 
-int main3()
+int main19()
 {
 	// change the values of the vector here
 	string s1;

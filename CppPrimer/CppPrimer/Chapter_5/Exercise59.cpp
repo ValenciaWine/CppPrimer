@@ -4,7 +4,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int main()
+int main59()
 {
 	int aCnt=0, eCnt=0 , iCnt=0 , oCnt =0, uCnt = 0;
 	char vowel;
