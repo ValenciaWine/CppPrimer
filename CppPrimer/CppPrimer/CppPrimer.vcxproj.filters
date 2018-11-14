@@ -18,27 +18,39 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chapter_6\Chapter6_Functions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter_5\Exercise59.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Chapter_5\Exercise514.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exercise517.cpp">
+    <ClCompile Include="Chapter_5\Exercise517.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exercise519.cpp">
+    <ClCompile Include="Chapter_5\Exercise519.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exercise520.cpp">
+    <ClCompile Include="Chapter_5\Exercise520.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exercise522.cpp">
+    <ClCompile Include="Chapter_5\Exercise522.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exercise523.cpp">
+    <ClCompile Include="Chapter_5\Exercise523.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter_6\Chapter6_Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter_6\Chapter6_Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

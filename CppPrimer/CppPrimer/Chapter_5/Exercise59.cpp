@@ -31,5 +31,5 @@ int main59()
 
 	cout << "Number of a vowels: " << aCnt << endl;
 
-	
+	return 0;
 }
