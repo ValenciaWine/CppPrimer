@@ -21,6 +21,9 @@
     <ClInclude Include="Chapter_6\Chapter6_Functions.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chapter_7\Chapter7_Functions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -50,7 +53,10 @@
     <ClCompile Include="Chapter_6\Chapter6_Functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter_6\Chapter6_Main.cpp">
+    <ClCompile Include="Chapter_7\Chapter7_Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

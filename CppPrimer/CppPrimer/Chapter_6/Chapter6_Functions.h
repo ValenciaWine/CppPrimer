@@ -12,6 +12,8 @@ using std::endl;
 using std::string;
 using std::vector;
 
+// Main function chapter 6
+void chapter_6();
 
 int static_func();
 int abs(int n);
