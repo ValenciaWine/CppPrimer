@@ -10,10 +10,6 @@ int main()
 
 	chapter_7();
 	
-	
-
-
-
 
 	return 0;
 
