@@ -250,3 +250,10 @@ Screen & Screen::set(pos r, pos col, char c)
 	// TODO: insert return statement here
 }
 
+inline void Window_mgr::clear(ScreenIndex i) {
+
+	Screen &s = screens[i];
+	s.contents = string(s.height * s.width, ' ');
+
+
+}

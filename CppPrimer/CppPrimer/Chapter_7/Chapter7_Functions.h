@@ -64,9 +64,24 @@ public:
 
 };
 
+class Screen;
+
+class Window_mgr {
+public:
+	// location ID for each screen on the window
+	using ScreenIndex = std::vector<Screen>::size_type;
+	//reset the Screen at the given position to all blanks
+	void clear(ScreenIndex);
+	Window_mgr() = default;
+
+private:
+	std::vector<Screen> screens;
+};
+
 class Screen {
 
 public:
+	friend void Window_mgr::clear(ScreenIndex);
 	using pos = std::string::size_type;
 	Screen() = default;
 	Screen(pos h, pos w, char c) : height(h), width(w), contents(h*w,c) {}
@@ -109,13 +124,17 @@ int bookstore_program_exer77();
 
 int bookstore_program_exer713();
 
-class X {
+
+struct X {
 
 	int item;
 	Screen item2;
 };
 
+
 class Y {
 	X item2;
 	int item;
 };
+
+
