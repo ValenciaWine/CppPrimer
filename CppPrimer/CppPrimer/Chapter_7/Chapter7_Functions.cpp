@@ -8,6 +8,28 @@ void chapter_7()
 	myScreen.display(cout);
 	cout << endl;
 
+	cout << "Delegated constructors: " << endl;
+	cout << "Sales_data_delegated d1 " << endl;
+	Sales_data_delegated d1;
+
+	cout << "------" << endl;
+	cout << "Sales_data_delegated d2 = = Sales_data_delegated(cin); " << endl;
+	Sales_data_delegated d2 = Sales_data_delegated(cin);
+	cout << "------" << endl;
+
+	cout << "Sales_data_delegated d3 = Sales_data_delegated(X12344); " << endl;
+	Sales_data_delegated d3 =  Sales_data_delegated("X12344");
+	cout << "------" << endl;
+
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << "------" << endl;
+	cout << "Delegated constructors: " << endl;
+	cout << "Vehicle v1 " << endl;
+	Vehicle veh1 = Vehicle(car, 5);
+	cout << "------" << endl;
+
 
 	//bookstore_program_exer71();
 	//

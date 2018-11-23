@@ -26,7 +26,8 @@ public:
 	Sales_data() : bookNo(""), units_sold(0), price(0.0), revenue(0.0) {}
 	Sales_data(const string &s, unsigned n, double p) : bookNo(s), units_sold(n), price(p) {}
 	Sales_data(const string &s) : bookNo(s) {}
-	Sales_data(std::istream &is) { read(is, *this); }
+	Sales_data(std::istream &is) { read(cin, *this); }
+
 
 
 	Sales_data& combine(const Sales_data& transaction);
@@ -138,3 +139,59 @@ class Y {
 };
 
 
+class Screener {
+public:
+	typedef std::string::size_type pos;
+	void dummy_fcn(pos height) {
+		cursor = width * height;
+	}
+
+private:
+	pos cursor = 0;
+	pos height = 0, width = 0;
+	
+};
+
+enum VehTypes { car, bike, truck };
+// Exercise 7.40
+class Vehicle {
+public:
+	
+	Vehicle() : Vehicle(car, 5) { cout << "Constructor 1 default\n"; }
+	Vehicle(VehTypes t, string lp, string b, string m, unsigned s) : type(t), licensePlate(lp), brand(b), model(m), sits(s) { cout << "Constructor 2\n"; }
+	Vehicle(VehTypes t = car, unsigned s = 5) : Vehicle(car, "", "", "", 5) { cout << "Constructor 3 vehicle unsigned\n"; };
+	
+private:
+	VehTypes type;
+	string licensePlate;
+	string brand;
+	string model;
+	unsigned sits;
+
+};
+
+
+// Exercise 7.41
+// Delegated constructors example to show execution order inside body functions and delegated constrctors.
+struct Sales_data_delegated {
+
+public:
+
+	Sales_data_delegated(const string &s, unsigned n, double p) : bookNo(s), units_sold(n), revenue(n*p) { cout << "Constructor 1 main\n"; }
+
+	Sales_data_delegated() : Sales_data_delegated("", 0, 0) { cout << "Constructor 2 default\n";  }
+	Sales_data_delegated(const string &s) : Sales_data_delegated(s, 0, 0) { cout << "Constructor 3 string s\n"; }
+	Sales_data_delegated(std::istream &is) : Sales_data_delegated() { cout << "Constructor 4 cin\n"; }
+
+
+
+	Sales_data_delegated& combine(const Sales_data_delegated& transaction);
+	string isbn() const;
+	double avg_price() const;
+
+private:
+	std::string bookNo;
+	unsigned units_sold = 0;
+	double price = 0.0;
+	double revenue = 0.0;
+};
