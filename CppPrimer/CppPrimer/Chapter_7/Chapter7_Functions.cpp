@@ -31,6 +31,15 @@ void chapter_7()
 	cout << "------" << endl;
 
 
+	vector<NoDefault> vec1(10);
+	vector<C> vec2(10);
+
+	for (auto i : vec1) {
+		cout << i.get_member_a() << " ";
+	}
+	cout << endl;
+
+
 	//bookstore_program_exer71();
 	//
 	//Sales_data item1;

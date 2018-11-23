@@ -195,3 +195,22 @@ private:
 	double price = 0.0;
 	double revenue = 0.0;
 };
+
+class NoDefault {
+public:
+	NoDefault(int &a) : member_a(a) {}
+	NoDefault() = default;
+	int get_member_a() { return member_a; }
+
+private:
+	int member_a;
+};
+
+class C {
+public:
+	C(NoDefault &o) : obj(o) {}
+	C() = default;
+
+private:	
+	NoDefault obj;
+};
