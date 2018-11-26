@@ -57,7 +57,7 @@ public:
 
 	Person() : name(""), address("") {}
 
-	Person(std::istream &is) {
+	explicit Person(std::istream &is) {
 		read_person(is, *this);
 	}
 
@@ -214,3 +214,43 @@ public:
 private:	
 	NoDefault obj;
 };
+
+class Debug {
+public:
+	constexpr Debug(bool b = true) : hw(b), io(b), other(b) {}
+	constexpr Debug(bool h, bool i, bool o) : hw(h), io(i), other(o) {}
+	constexpr bool any() { return hw || io || other; }
+
+	constexpr void set_io(bool io) { this->io = io; }
+	void set_hw(bool hw) { this->hw = hw; }
+	void set_other(bool other) { this->other = other; }
+
+private:
+	bool hw;	// hardware errors other than IO errors
+	bool io;	// IO errors
+	bool other;	// other errors
+
+};
+
+class Account {
+public:
+	void calculate() { amount += amount * interestRate; }
+	static double rate() { return interestRate; }
+	static void rate(double rate) { Account::interestRate = rate; }
+
+private:
+	static constexpr int period = 30; // period is a constant expression
+	double daily_tbl[period];
+	string owner;
+	double amount;
+	static double interestRate;
+	static double initRate() {
+		return 0.0;
+	}
+
+};
+ 
+
+
+
+

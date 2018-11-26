@@ -2,6 +2,10 @@
 
 void chapter_7()
 {
+
+
+
+
 	Screen myScreen(5, 5, 'X');
 	myScreen.move(4, 1).set('#').display(cout);
 	cout << "\n";
