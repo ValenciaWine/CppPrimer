@@ -1,6 +1,6 @@
 #include "Chapter7_Functions.h"
 
-void chapter_7()
+void chapter_7(string &filename, string &filename_out)
 {
 
 
@@ -56,8 +56,14 @@ void chapter_7()
 	//print(cout, item3); cout << endl;
 	//print(cout, item4); cout << endl;
 	//
-	
-	
+	cout << "------" << endl;
+	bookstore_program_exer86(filename);
+	cout << "------" << endl;
+
+	cout << "------" << endl;
+	bookstore_program_exer87(filename, filename_out);
+	cout << "------" << endl;
+
 
 	cout << "End\n";
 	int end;
@@ -202,6 +208,70 @@ int bookstore_program_exer713()
 		std::cerr << "No data?!" << endl;
 		return -1; // indicate failure
 	}
+	return 0;
+}
+
+int bookstore_program_exer86(string &filename)
+{
+	std::ifstream input(filename);
+	Sales_data total;	// variable to hold data for the next transaction
+// read the first transaction and ensure that there are data to process
+	if (read(input, total)) {
+		Sales_data trans; // variable to hold the running sum
+		// read and process the remaining transactions
+		while (read(input, trans)) {
+			// if we're still processing the same book
+			if (total.isbn() == trans.isbn()) {
+				//total += trans; // update the running total
+				total.combine(trans);
+			}
+			else {
+				// print results for the previous book
+				print(cout, total); cout << endl;
+				total = trans; // total now refers to the next book
+			}
+		}
+		print(cout, total); cout << endl;
+	}
+	else {
+		// no input! warn the user
+		std::cerr << "No data?!" << endl;
+		return -1; // indicate failure
+	}
+	return 0;
+}
+
+int bookstore_program_exer87(string &input_name, string &output_name)
+{
+	std::ifstream input(input_name);
+	std::ofstream output(output_name, std::ofstream::out | std::ofstream::app);
+	
+	Sales_data total;	// variable to hold data for the next transaction
+// read the first transaction and ensure that there are data to process
+	if (read(input, total)) {
+		Sales_data trans; // variable to hold the running sum
+		// read and process the remaining transactions
+		while (read(input, trans)) {
+			// if we're still processing the same book
+			if (total.isbn() == trans.isbn()) {
+				//total += trans; // update the running total
+				total.combine(trans);
+			}
+			else {
+				// print results for the previous book
+				print(output, total); output << endl;
+				total = trans; // total now refers to the next book
+			}
+		}
+		print(output, total); output << endl;
+	}
+	else {
+		// no input! warn the user
+		std::cerr << "No data?!" << endl;
+		return -1; // indicate failure
+	}
+	input.close();
+	output.close();
 	return 0;
 }
 

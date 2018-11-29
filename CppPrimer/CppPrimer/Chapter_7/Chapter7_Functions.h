@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 #include <initializer_list>
+#include <fstream>
+
 
 
 using std::cin;
@@ -14,8 +16,8 @@ using std::string;
 using std::vector;
 
 
-// Main function chapter 6
-void chapter_7();
+// Main function chapter 7
+void chapter_7(string &filename, string &filename_out);
 
 struct Sales_data {
 	friend std::istream &read(std::istream &is, Sales_data &item);
@@ -124,6 +126,12 @@ int bookstore_program_exer73();
 int bookstore_program_exer77();
 
 int bookstore_program_exer713();
+
+// Exercise 8.6
+int bookstore_program_exer86(string &filename);
+
+// Exercise 8.7 and 8.8
+int bookstore_program_exer87(string &input_name, string &output_name);
 
 
 struct X {
