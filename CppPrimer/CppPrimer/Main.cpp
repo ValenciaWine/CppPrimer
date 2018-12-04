@@ -10,8 +10,8 @@ int main(int argc,char**argv)
 
 	//chapter_6();
 
-	string filename = argv[1];
-	string filename_out = argv[2];
+	//string filename = argv[1];
+	//string filename_out = argv[2];
 	//cout << argv[1] << endl;
 	//chapter_7(filename, filename_out);
 	
