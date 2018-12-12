@@ -20,7 +20,6 @@ using std::endl;
 using std::string;
 using std::vector;
 
-
 // Main function chapter 9
 void chapter_9();
 
