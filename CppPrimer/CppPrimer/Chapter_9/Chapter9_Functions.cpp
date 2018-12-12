@@ -54,7 +54,6 @@ void chapter_9()
 	
 	cout << "------------\n";
 
-
 	std::vector<int>::iterator it = exer95(ex94vec.begin(), ex94vec.end(), 6);
 	cout << (it == ex94vec.end() ? "Not found\n" : "Found!\n");
 
@@ -64,7 +63,6 @@ void chapter_9()
 		cout << *iter1;
 		++iter1;
 	}
-
 
 	cout << "---\nEnd\n";
 	int end;
@@ -96,9 +94,7 @@ std::vector<int>::iterator exer95(std::vector<int>::iterator beg, std::vector<in
 	if (!found) { // if number not found, return end iterator
 		found_iterator = end;
 	}
-
 	return found_iterator;
- 
 }
 
 void exer911()
@@ -111,8 +107,6 @@ void exer911()
 	std::vector<int> vec6;
 	std::vector<int> vec7 = vec1;
 	std::vector<int> vec8(vec1);
-
-
 }
 
 void exer913()
@@ -125,12 +119,12 @@ void exer913()
 
 void exer914()
 {
-	std::list<const char*> list1 = {"hola", "adios"};
+	std::list<const char*> list1 = {"hello", "bye"};
 	//vector<string> vec1(list1.begin(), list1.end());
 	std::vector<string> vec2;
 	vec2.assign(list1.begin(),list1.end());
-
 }
+
 // Exercise 9.15 // Compare two vector<int> to check if they are equal.
 bool areVectorsEqual(std::vector<int> vecA, std::vector<int> vecB)
 {
@@ -140,6 +134,7 @@ bool areVectorsEqual(std::vector<int> vecA, std::vector<int> vecB)
 	}
 	return equal;
 }
+
 // Exercise 9.16
 // Compare list int to vector int to check if they are equal
 // Change type of list int to vector int to make comparison possible
@@ -167,7 +162,6 @@ std::deque<string> exer918()
 		cout << s << " ";
 	}
 	cout << endl;
-
 	return result;
 }
 
@@ -187,7 +181,6 @@ std::list<string> exer919()
 		cout << s << " ";
 	}
 	cout << endl;
-
 	return result;
 }
 
@@ -204,6 +197,7 @@ void exer920(std::list<int>& inputList, std::deque<int>& evenDeque, std::deque<i
 		}
 	}
 }
+
 // Exercise 9.21
 // changing container type from list to vector produces same behaviour
 void exer921()
@@ -303,7 +297,6 @@ void exer927()
 			curr++;
 		}
 	}
-
 }
 
 void exer928(std::forward_list<string> &flist, string str1, string str2)
@@ -324,9 +317,6 @@ void exer928(std::forward_list<string> &flist, string str1, string str2)
 	if (!found) {
 		flist.insert_after(prev, str2);
 	}
-
-
-
 }
 
 // change to accept list and forward_list
@@ -347,7 +337,6 @@ void exer931()
 		cout << i << " ";
 	}
 	cout << endl;
-
 }
 
 // list version
@@ -369,7 +358,6 @@ void exer931_list()
 		cout << i << " ";
 	}
 	cout << endl;
-
 }
 
 // forward_list version
@@ -397,7 +385,6 @@ void exer931_flist()
 		cout << i << " ";
 	}
 	cout << endl;
-
 }
 
 void exer933()
@@ -433,7 +420,6 @@ void exer934()
 		cout << i << " ";
 	}
 	cout << endl;
-
 }
 
 void exer938()
@@ -471,14 +457,10 @@ void exer938()
 
 	cout << "ivec: Size: " << ivec.size() << endl
 		<< "Capacity: " << ivec.capacity() << endl << "--------" << endl;
-
-
-
 }
 
 void exer941()
 {
-
 	std::vector<char> vecChar = { 'h', 'o','l','a','\0'};
 	for (auto i : vecChar) {
 		cout << i;
@@ -487,9 +469,6 @@ void exer941()
 	string str(vecChar.begin(), vecChar.end());
 	cout << str;
 	cout << endl;
-
-	
-
 }
 
 void exer943()
@@ -500,7 +479,6 @@ void exer943()
 
 	oldVal.erase(3,3);
 	oldVal.insert(3, s);
-
 }
 
 void exer945()
@@ -511,7 +489,6 @@ void exer945()
 	string name = prefix.append(" ").append(Lname).append(" ").append(suffix);
 
 	cout << name << endl;
-
 }
 
 void exer947_1()
@@ -534,7 +511,6 @@ void exer947_1()
 	}
 	cout << endl;
 
-
 	cout << "test -------------------" << endl;
 	cout << "test -------------------" << endl;
 	cout << "test -------------------" << endl;
@@ -554,9 +530,7 @@ void exer947_1()
 	cout << "test -------------------" << endl;
 	cout << "test -------------------" << endl;
 	cout << "test -------------------" << endl;
-
 }
-
 
 void exer947_2()
 {
@@ -583,9 +557,7 @@ void exer947_2()
 
 	auto pos2 = numbers2.find(name2);
 	cout << pos2 << endl;
-
 }
-
 
 // read file
 // read every word
@@ -622,7 +594,6 @@ void exer949()
 			}
 		}
 	}
-
 	cout << "Longest word: " << longestWord << endl;
 	cout << "Word size: " << longest << endl;
 }
@@ -640,14 +611,9 @@ void exer950()
 	for (auto str : vec2) {
 		fsum += stod(str);
 	}
-
 	cout << "total sum: " << sum << endl;
 	cout << "total float sum: " << fsum << endl;
-
-
-
 }
-
 
 T_Date::T_Date(string date)
 {
@@ -673,10 +639,7 @@ T_Date::T_Date(string date)
 	cout << "Month: " << this->month << endl;
 	cout << "Day: " << this->day << endl;
 	cout << "Year: " << this->year << endl;
-
 }
-
-
 
 void exer952()
 {
@@ -703,6 +666,4 @@ void exer952()
 	else {
 		cout << "Parenthesis expression is not correct" << endl;
 	}
-
-
 }
