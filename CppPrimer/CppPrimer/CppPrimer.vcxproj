@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Chapter_10\Chapter10_Functions.h" />
     <ClInclude Include="Chapter_6\Chapter6_Functions.h" />
     <ClInclude Include="Chapter_7\Chapter7_Functions.h" />
     <ClInclude Include="Chapter_8\Chapter8_Functions.h" />
@@ -158,6 +159,9 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Chapter_10\Chapter10_Functions.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Chapter_6\Chapter6_Functions.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>

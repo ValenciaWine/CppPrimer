@@ -6,6 +6,7 @@
 #include <vector>
 #include <initializer_list>
 #include <fstream>
+#include <algorithm>
 
 
 
@@ -259,6 +260,13 @@ private:
 };
  
 
+// Chapter 10 crossover
+// Exercise 10.12
+bool compareIsbn(Sales_data &item1, Sales_data &item2);
+void exer1012();
 
+// Chapter 10 crossover
+// Exercise 10.17
+void exer1017();
 
 

@@ -2,10 +2,6 @@
 
 void chapter_7(string &filename, string &filename_out)
 {
-
-
-
-
 	Screen myScreen(5, 5, 'X');
 	myScreen.move(4, 1).set('#').display(cout);
 	cout << "\n";
@@ -273,6 +269,53 @@ int bookstore_program_exer87(string &input_name, string &output_name)
 	input.close();
 	output.close();
 	return 0;
+}
+
+bool compareIsbn(Sales_data & item1, Sales_data & item2)
+{
+	return item1.isbn() < item2.isbn();
+}
+
+void exer1012()
+{
+	Sales_data item1 = Sales_data("3293-23X");
+	Sales_data item2 = Sales_data("3293-23X");
+	Sales_data item3 = Sales_data("111X");
+
+	vector<Sales_data> vec{ item1, item2, item3 };
+	for (const auto &i : vec) {
+		cout << i.isbn() << " ";
+	}
+	cout << endl;
+	// sort the vector comparing isbn
+	std::sort(vec.begin(), vec.end(), compareIsbn);
+
+	for (const auto &i : vec) {
+		cout << i.isbn() << " ";
+	}
+	cout << endl;
+	
+}
+
+void exer1017()
+{
+
+	Sales_data item1 = Sales_data("3293-23X");
+	Sales_data item2 = Sales_data("3293-23X");
+	Sales_data item3 = Sales_data("111X");
+
+	vector<Sales_data> vec{ item1, item2, item3 };
+	for (const auto &i : vec) {
+		cout << i.isbn() << " ";
+	}
+	cout << endl;
+	// sort the vector comparing isbn
+	std::sort(vec.begin(), vec.end(), [](Sales_data &i1, Sales_data &i2) {return i1.isbn() < i2.isbn(); });
+
+	for (const auto &i : vec) {
+		cout << i.isbn() << " ";
+	}
+	cout << endl;
 }
 
 std::istream &read(std::istream &is, Sales_data &item) {

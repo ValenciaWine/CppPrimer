@@ -2,6 +2,7 @@
 #include "Chapter_7/Chapter7_Functions.h"
 #include "Chapter_8/Chapter8_Functions.h"
 #include "Chapter_9/Chapter9_Functions.h"
+#include "Chapter_10/Chapter10_Functions.h"
 #define NDEBUG
 
 
@@ -19,7 +20,9 @@ int main(int argc,char**argv)
 	//const string filename = "filename.txt";
 
 	//chapter_8(filename);
-	chapter_9();
+	//chapter_9();
+
+	chapter_10();
 
 
 	return 0;
