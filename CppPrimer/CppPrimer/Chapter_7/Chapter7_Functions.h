@@ -269,4 +269,8 @@ void exer1012();
 // Exercise 10.17
 void exer1017();
 
+// Chapter 10 crossover
+// Exercise 10.32
+void exer1032();
+
 

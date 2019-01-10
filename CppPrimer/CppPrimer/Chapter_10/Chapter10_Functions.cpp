@@ -34,7 +34,7 @@ void chapter_10()
 	exer1017();
 	cout << "-------------" << endl;
 
-	words{ "fox", "argument","jumps", "over", "quick", "red", "red", "slow", "the", "the", "the", "turtle" };
+	words = { "fox", "argument","jumps", "over", "quick", "red", "red", "slow", "the", "the", "the", "turtle" };
 	exer1018(words, 6);
 	cout << "------------\n";
 	exer1019(words, 6);
@@ -55,12 +55,30 @@ void chapter_10()
 	cout << "------------\n";
 	exer1029();
 	cout << "------------\n";
+	cout << "exer1030()\n";
 	//exer1030(); // cin OK
 	cout << "------------\n";
+	cout << "exer1031()\n";
 	//exer1031(); // cin OK
 	cout << "------------\n";
 	exercise1033(); cout << "10.33: Ok." << endl;
 	cout << "------------\n";
+	exercise1034();
+	cout << "------------\n";
+	exercise1035();
+	cout << "------------\n";
+	exercise1036();
+	cout << "------------\n";
+	exercise1037();
+	cout << "------------\n";
+	std::list<string> listWords = { "fox", "argument","jumps", "over", "quick", "red", "red", "slow", "the", "the", "the", "turtle" };
+	exercise1042(listWords);
+	for (auto st : listWords) {
+		cout << st << " ";
+	}
+	cout << endl;
+	cout << "------------\n";
+
 	cout << "---\nEnd\n";
 	int end;
 	cin >> end;
@@ -258,8 +276,6 @@ void exer1021()
 
 void exer1022(vector<string> &words, vector<string>::size_type sz)
 {
-
-
 	elimDups(words);
 	std::stable_sort(words.begin(), words.end(), [](const string &a, const string &b) { return a.size() < b.size(); });
 	auto wc = std::find_if(words.begin(), words.end(), std::bind(check_size, std::placeholders::_1,sz) );
@@ -407,8 +423,56 @@ void exercise1033()
 	}
 }
 
+void exercise1034()
+{
+	std::vector<int> vec{ 1,2,3,4,5,6,7,8,9 };
+	for (std::vector<int>::const_reverse_iterator it = vec.crbegin(); it != vec.crend(); ++it) {
+		cout << *it << " ";
+	}
+	cout << endl;
+}
 
+// ugly code. Bad. Fix. Print reverse without reverse iterators.
+void exercise1035()
+{
+	std::vector<int> vec{ 1,2,3,4,5,6,7,8,9 };
+	auto it = vec.cend() - 1;
+	while ( it >= vec.cbegin() ) {
+		cout << *it << " ";
+		if (it != vec.cbegin()) {
+			it--;
+		}
+		else { 
+			break;
+		}
+	}
+	cout << endl;
+}
 
+void exercise1036()
+{
+	std::list<int> ls{0,1,2,3,4,5,6,7,8,1,1,1,0,1,1,9 };
+	auto count = std::distance(ls.cbegin(), find(ls.crbegin(), ls.crend(), 0).base());
+	cout << "Position where 0 located: " << count << endl ;
+}
 
+void exercise1037()
+{
+	std::vector<int> vec{ 0,1,2,3,4,5,6,7,8,9 };
+	std::list<int> list;
+	auto beg = vec.crbegin() + 2;
+	auto end = vec.crbegin() + 7;
+	std::copy(beg, end, std::back_inserter(list));
+	for (auto it : list) {
+		cout << it << " ";
+	}
+	cout << endl;
+}
 
+// using list-version algorithms
+void exercise1042(std::list<string> &words)
+{
+	words.sort();
+	words.unique(); 
+}
 

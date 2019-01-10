@@ -69,14 +69,11 @@ void biggies(vector<string> &words, vector<string>::size_type sz);
 // Exercise 10.18
 void biggies_partition(vector<string> &words, vector<string>::size_type sz);
 
-
-
 // Exercise 10.18
 void exer1018(vector<string> &words, vector<string>::size_type sz);
 
 // Exercise 10.19
 void exer1019(vector<string> &words, vector<string>::size_type sz);
-
 
 void elimDups(vector<string> &words);
 
@@ -116,3 +113,18 @@ void exer1032(); // TODO
 
 // Exercise 10.33
 void exercise1033();
+
+// Exercise 10.34
+void exercise1034();
+
+// Exercise 10.35
+void exercise1035();
+
+// Exercise 10.36
+void exercise1036();
+
+// Exercise 10.37
+void exercise1037();
+
+// Exercise 10.42
+void exercise1042(std::list<string> &words);
