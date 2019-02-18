@@ -4,6 +4,7 @@
 #include "Chapter_9/Chapter9_Functions.h"
 #include "Chapter_10/Chapter10_Functions.h"
 #include "Chapter_11/Chapter11_Functions.h"
+#include "Chapter_12/Chapter12_Functions.h"
 #define NDEBUG
 
 
@@ -23,7 +24,9 @@ int main(int argc,char**argv)
 	//chapter_8(filename);
 	//chapter_9();
 	//chapter_10();
-	chapter_11();
+	//chapter_11();
+
+	chapter_12();
 
 	return 0;
 
